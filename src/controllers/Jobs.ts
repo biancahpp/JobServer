@@ -27,3 +27,14 @@ export const getJobs = async (req:Request, res:Response) => {
     res.status(400)
   }
 }
+
+export const apiDeleteJob = async (req: Request, res: Response) => {
+  try {
+    const job = await Job.findByIdAndDelete(req.params.id)
+    res.status(200).json(job)
+  }
+  catch (err) {
+    console.log(err)
+    res.status(400)
+  }
+}
