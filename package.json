@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "tsc --watch",
-    "start": "node dist/index.js",
-    "build": "npm run build"
+    "start": "node .",
+    "build": "tsc",
+    "prestart": "npm run build"
   },
   "keywords": [],
   "author": "",
