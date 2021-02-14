@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 const corsConfig = {
-  origin: [process.env.FRONT_END_URL], 
+  origin: "*", 
   credentials: true
 }
 app.use(bodyParser.json());
